@@ -7,8 +7,8 @@ import database.InfoEntity
 class InfoDataSourceImpl(db: InfoDatabase) : InfoDataSource {
     private val queries = db.infoQueries
 
-    override suspend fun insertInfo(firstName: String, secondName: String) {
-        queries.insertInfo(id = null, firstName = firstName, secondName = secondName)
+    override suspend fun insertInfo(firstName: String, secondName: String, id: Long?) {
+        queries.insertInfo(firstName = firstName, secondName = secondName, id = id)
     }
 
     override suspend fun getAllInfo(): List<InfoEntity> {
