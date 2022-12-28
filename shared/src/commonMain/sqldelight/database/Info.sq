@@ -1,0 +1,21 @@
+CREATE TABLE infoEntity(
+   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+   firstName TEXT NOT NULL,
+   secondName TEXT NOT NULL
+);
+
+getAllInfo:
+SELECT * FROM infoEntity;
+
+insertInfo:
+INSERT OR REPLACE
+INTO infoEntity(
+  id,
+  firstName,
+  secondName
+) VALUES(?,?,?);
+
+deleteInfoById:
+DELETE FROM infoEntity
+WHERE id=?;
+
